@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The CyanogenMod Project
+# Copyright 2012 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,22 +14,6 @@
 # limitations under the License.
 #
 
-## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/jfltevzw/jfltevzw-vendor.mk)
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/gwe_jfltevzw.mk
 
-# Disable MSB for GPS
-NEEDS_GPS_MSB_DISABLED := true
-
-# loki
-PRODUCT_PACKAGES += \
-    loki_patch \
-    loki_flash \
-    loki.sh \
-    loki_bootloaders \
-    unlocked_bootloaders
-
-## common overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/jf-common/overlay-cdma
-
-# Inherit from jf-common
-$(call inherit-product, device/samsung/jf-common/jf-common.mk)
