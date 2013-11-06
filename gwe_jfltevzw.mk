@@ -1,7 +1,5 @@
 $(call inherit-product, device/samsung/jfltevzw/full_jfltevzw.mk)
 
-$(call inherit-product, vendor/gwe/config/cdma.mk)
-
 $(call inherit-product, vendor/gwe/config/nfc_enhanced.mk)
 
 $(call inherit-product, vendor/gwe/config/common_full_phone.mk)
